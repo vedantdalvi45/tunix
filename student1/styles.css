@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.nav-links .active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.259);
+  background-color: #ed4040;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Purple theme */
+  padding: 8px 30px;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin-left: 10px;
+}
+
+.nav-links a {
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 550;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links a:hover {
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.136);
+  background-color: #eda240;
+  /* Hover effect */
+}
+
+.navbar .menu-img {
+  display: none;
+  height: 30px;
+  width: 30px;
+}
+
+.slidebar {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+  background-color: #ffffff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+
+}
+
+.slidebar .f-dash {
+  margin-top: 30px;
+}
+
+.slidebar .close-img {
+  width: 25px;
+  border: #ff0000 solid 2px;
+  border-radius: 50%;
+  padding: 2px;
+  margin: 5px;
+  height: auto;
+  align-self: end;
+}
+
+.nav-links2 a {
+  padding: 8px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.nav-links2 li {
+  list-style-type: none;
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.nav-links2 .active {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.259);
+  background-color: #ed4040;
+  color: white;
+}
+
+@media(max-width : 1000px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar .menu-img {
+    display: block;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+}
+@media(min-width : 1000px) {
+  .slidebar{
+    display: none;
+  }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .subject-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+          }
+      
+          .subject-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+      
+          .subject-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+      
+          .subject-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+          }
+      
+          .subject-item h3 {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+          }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="slidebar" id="slidebar">
+        <img src="src/close.png" onclick="closeSlidebar()" alt="Tunix Logo" class="close-img">
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links2">
+            <li class="f-dash"><a href="index.html" >Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a class="active" href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+
+    </nav>
+
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" >Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a class="active" href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+        <img src="src/menu.png" onclick="showSlidebar()" alt="Tunix Logo" class="menu-img">
+    </nav>
+
+    <div class="subject-list">
+        <!-- Subject 1 -->
+        <div class="subject-item">
+          <img src="https://img.freepik.com/free-vector/math-background_23-2148144700.jpg?semt=ais_hybrid" alt="Math">
+          <h3>Mathematics</h3>
+        </div>
+    
+        <!-- Subject 2 -->
+        <div class="subject-item">
+          <img src="https://img.freepik.com/free-vector/colorful-science-education-background_23-2148490697.jpg?semt=ais_hybrid" alt="Science">
+          <h3>Science</h3>
+        </div>
+    
+        <!-- Subject 3 -->
+        <div class="subject-item">
+          <img src="https://t3.ftcdn.net/jpg/06/15/10/48/360_F_615104858_8gCJuq99WbB2t4gqtVw287oq8Z1xUHKo.jpg" alt="History">
+          <h3>History</h3>
+        </div>
+    
+        <!-- Subject 4 -->
+        <div class="subject-item">
+          <img src="https://t4.ftcdn.net/jpg/02/25/31/89/360_F_225318919_klpkRFyiJjxWdwLptzfeCX2Bo6QsBndm.jpg" alt="English">
+          <h3>English</h3>
+        </div>
+    
+        <!-- Subject 5 -->
+        <div class="subject-item">
+          <img src="https://t4.ftcdn.net/jpg/02/43/47/67/360_F_243476769_d15WIB1ERQTzvRW51NTMOi5guTvoBOrf.jpg" alt="Geography">
+          <h3>Geography</h3>
+        </div>
+    
+        <!-- Subject 6 -->
+        <div class="subject-item">
+          <img src="https://st2.depositphotos.com/1152339/8035/i/950/depositphotos_80352716-stock-photo-science-concept-computer-science-on.jpg" alt="Computer Science">
+          <h3>Computer Science</h3>
+        </div>
+      </div>
+
+    <script>
+        // Toggle menu for mobile view
+        function showSlidebar(){
+            document.getElementById('slidebar').style.display = 'flex';
+        }  
+        function closeSlidebar(){
+            document.getElementById('slidebar').style.display = 'none';
+        }   
+    </script>
+
+</body>
+
+</html>

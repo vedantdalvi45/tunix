@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .body-items{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            background-color: #ddd;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px;
+            
+        }
+
+        .profile {
+            display: flex;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .photo {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .student-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
+        .details {
+            flex: 2;
+            padding: 10px;
+        }
+
+        .details h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .info {
+            margin-bottom: 15px;
+        }
+
+        .info label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .info p {
+            color: #777;
+            margin-left: 10px;
+        }
+
+        .info p,
+        .info label {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="slidebar" id="slidebar">
+        <img src="src/close.png" onclick="closeSlidebar()" alt="Tunix Logo" class="close-img">
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links2">
+            <li class="f-dash"><a href="index.html">Dahsboard</a></li>
+            <li> <a class="active" href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+
+    </nav>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Dahsboard</a></li>
+            <li> <a class="active" href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+        <img src="src/menu.png" onclick="showSlidebar()" alt="Tunix Logo" class="menu-img">
+    </nav>
+
+    <div class="body-items">
+        <div class="container">
+            <div class="profile">
+                <div class="photo">
+                    <img src="src/stud.png" alt="Student Photo" class="student-photo">
+                </div>
+
+                <div class="details">
+                    <h2>Student Profile</h2>
+                    <div class="info">
+                        <label for="fname">First Name:</label>
+                        <p id="fname">Ajay</p>
+                    </div>
+                    <div class="info">
+                        <label for="mname">Middle Name:</label>
+                        <p id="mname">Raj</p>
+                    </div>
+                    <div class="info">
+                        <label for="lname">Last Name:</label>
+                        <p id="lname">Deogan</p>
+                    </div>
+                    <div class="info">
+                        <label for="address">Address:</label>
+                        <p id="address">1234 Main St, Cityville, ABC</p>
+                    </div>
+                    <div class="info">
+                        <label for="standard">Standard:</label>
+                        <p id="standard">10 <sup>th</sup></p>
+                    </div>
+                    <div class="info">
+                        <label for="subjects">Subjects Enrolled:</label>
+                        <p id="subjects">Math, Science, English, History</p>
+                    </div>
+                    <div class="info">
+                        <label for="parent-contact">Parent's Contact Number:</label>
+                        <p id="parent-contact">+1234567890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Toggle menu for mobile view
+        function showSlidebar() {
+            document.getElementById('slidebar').style.display = 'flex';
+        }
+        function closeSlidebar() {
+            document.getElementById('slidebar').style.display = 'none';
+        }   
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunix - Tuition Administration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .main-content {
+            flex: 1; 
+            padding: 20px;
+        }
+
+        .dashboard-section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            height: 300px; 
+            position: relative; 
+        }
+
+        .notice {
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+
+       
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 150px; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+ 
+    <nav class="slidebar" id="slidebar">
+        <img src="src/close.png" onclick="closeSlidebar()" alt="Tunix Logo" class="close-img">
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> 
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links2">
+            <li class="f-dash"><a href="index.html" class="active">Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+
+    </nav>
+
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+        <img src="src/menu.png" onclick="showSlidebar()" alt="Tunix Logo" class="menu-img">
+    </nav>
+
+
+    <div class="main-content">
+        <h1>Student Dashboard</h1>
+
+        <div class="dashboard-section">
+            <h2>Performance</h2>
+            <div class="chart-container">
+                <canvas id="performanceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Attendance</h2>
+            <div class="chart-container">
+                <canvas id="attendanceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Notices</h2>
+            <div id="notices-container">
+                <div class="notice">
+                    <p><strong>Subject:</strong> Parent-Teacher Meeting</p>
+                    <p><strong>Date:</strong> 2024-03-15</p>
+                </div>
+                <div class="notice">
+                    <p><strong>Event:</strong> Annual Day Rehearsals</p>
+                    <p><strong>Date:</strong> 2024-03-22 to 2024-03-25</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Upcoming Events</h2>
+            <p>List of upcoming events goes here...</p>
+        </div>
+
+        <div class="dashboard-section">
+            <h2>Student Details</h2>
+            <p>Student information goes here...</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        
+        const performanceData = {
+            labels: ['Math', 'Science', 'English'],
+            datasets: [{
+                label: 'Grades',
+                data: [85, 92, 78],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const attendanceData = {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            datasets: [{
+                label: 'Attendance (%)',
+                data: [90, 95, 88, 92],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+
+     
+        const performanceChart = new Chart(document.getElementById('performanceChart'), {
+            type: 'bar', 
+            data: performanceData,
+        });
+
+        const attendanceChart = new Chart(document.getElementById('attendanceChart'), {
+            type: 'line',
+            data: attendanceData,
+        });
+    </script>
+
+    <script>
+       
+        function showSlidebar(){
+            document.getElementById('slidebar').style.display = 'flex';
+        }  
+        function closeSlidebar(){
+            document.getElementById('slidebar').style.display = 'none';
+        }   
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuition Fees</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="slidebar" id="slidebar">
+        <img src="src/close.png" onclick="closeSlidebar()" alt="Tunix Logo" class="close-img">
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links2">
+            <li class="f-dash"><a href="index.html" >Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a class="active" href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+
+    </nav>
+
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="src/logo.png" alt="Tunix Logo" class="logo-img"> <!-- Replace with your logo image -->
+            <span class="logo-text">Tunix</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" >Dahsboard</a></li>
+            <li> <a href="profile.html">Profile</a></li>
+            <li> <a href="courses.html">Cources</a></li>
+            <li> <a href="grades.html">Grades</a></li>
+            <li> <a class="active" href="tuition_fees.html">Tuition Fees</a></li>
+            <li> <a href="notifications.html">Notifications</a></li>
+            <li> <a href="support.html">Support</a></li>
+            <li> <a href="use_setting.html">User Setting</a></li>
+        </ul>
+        <img src="src/menu.png" onclick="showSlidebar()" alt="Tunix Logo" class="menu-img">
+    </nav>
+
+
+    <script>
+        // Toggle menu for mobile view
+        function showSlidebar(){
+            document.getElementById('slidebar').style.display = 'flex';
+        }  
+        function closeSlidebar(){
+            document.getElementById('slidebar').style.display = 'none';
+        }   
+    </script>
+
+</body>
+
+</html>
